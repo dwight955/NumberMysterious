@@ -1,9 +1,11 @@
 body{
     margin: 0;
     padding: 0;
+    background: #eee;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
 }
 .container{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
+    padding: 1em;
 }

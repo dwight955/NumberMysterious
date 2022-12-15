@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/general.css">
+    <link rel="stylesheet" href="/styles/inGame.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <title>Mysterious Number</title>
+</head>
+<body>
+    <div class="title">
+        <span class="title__text">Mysterious Number</span>
+    </div>
+   <div class="container">
+        <div class="lifes__container">
+            <span id="lifes"></span>
+        </div>
+        <section class="game">
+            <div class="game__clue">
+                <h1>CLUE</h1>
+                <h2>40 ≥ ? ≤ 100</h2>
+            </div>
+            <div class="game__number">
+                <span class="game__number_text" id="bigNumber">?</span>
+                <div class="game__number_msg" id="result">Texto</div>
+            </div>
+            <input class="game__input_number" type="number" id="input_number" placeholder="The number is ...">
+            
+            <button class="game__btnGo" id="validate">GO!</button>
+        </section> 
+        <div id="score"></div>
+   </div>
+    
+    <!--SCRIPTS -->
+    <script src="/js/resources.js"></script>
+    <script src="/js/validate.js"></script>
+    <script src="/js/game.js"></script>
+</body>
+</html>

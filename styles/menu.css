@@ -1,0 +1,38 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu__container_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu__btn{
+    width: 40%;
+    padding: .5em 2em .5em 2em;
+    border-radius: 10px 10px;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.menu__btn > a{
+    font-size: 18pt;
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter';
+}
+.menu__title{
+    font-size: 35pt;
+    text-align: left;
+    color: #F86526;
+    font-style: italic;
+    font-weight: 1500;
+    font-family: 'Inter';
+    margin-bottom: 2em;
+}
+.start{
+    background: #6CD22D;
+}
+.howToPlay{
+    background: #DD5A6A;
+}

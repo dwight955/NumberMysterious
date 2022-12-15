@@ -1,0 +1,71 @@
+.title{
+    position: sticky;
+    background: #fff;
+    border: 1px solid #F86526;
+    width: 100%;
+    color: #F86526;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: .5em;
+}
+.title__text{
+    font-size: 20pt;
+    font-weight: 1000;
+    font-style: italic;
+}
+.lifes__container{
+    text-align: right;
+    font-size: 18pt;
+    font-weight: bold;
+}
+.game{
+    text-align: center;
+}
+.game__clue{
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.game__clue > h1, .game__clue > h2, .title__text, .lifes__container, .game__number_text, .game__input_number, .game__number_msg{
+    font-family: 'Inter';
+}
+.game__number_msg, .lifes__container, .game__input_number{
+    margin-bottom: 2vh;
+}
+.game__clue > h1{
+    font-size: 23pt;
+    color: #20740B;
+    font-weight: 700;
+}
+.game__clue > h2{
+    font-size: 25pt;
+}
+.game__number_text{
+    font-size: 45vw;
+    color: #F86526;
+}
+
+.game__number_msg{
+    font-size: 6vw;
+}
+.game__input_number{
+    width: 95%;
+    box-sizing: border-box;
+    padding: .5em;
+    font-size: 6vw;
+    font-style: italic;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #C1BFBF;
+}
+.game__btnGo{
+    font-size: 6vw;
+    color: #fff;
+    font-weight: bold;
+    background: #6CD22D;
+    width: 25vw;
+    padding: .5em;
+    border: 0;
+}
