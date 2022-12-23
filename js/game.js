@@ -1,10 +1,7 @@
 // Se genera el numero misterioso entre el rango 40 a 100
-let numberMysterious = getRandomArbitrary(rangeMin, rangeMax);
 let inputNumber = 0;
-
-console.log(numberMysterious)
-
-//La funcion se aplica cuando se empieza a escrbir en el input de texto
+/*INPUT NUMBER*/ 
+// Cuando se empieza a escrbir en el input de texto
 input.addEventListener("keyup",function(e) {
     inputNumber = input.value;
     textBigNumber.textContent= input.value;
@@ -12,9 +9,19 @@ input.addEventListener("keyup",function(e) {
         textBigNumber.textContent= '?';
     }
 })
-// La funcion se aplica cuando se hace click al boton GO
+// click al boton GO
 btnGo.addEventListener('click', function(){
     // Obtener el valor del numero ingresado
-    inputNumber = Number(input.value);
-    validate(numberMysterious, inputNumber)
+    inputNumber = parseInt(input.value);
+
+    if(numberMysterious == inputNumber){
+        win();
+    }else{
+        if(countLifes != 0){
+            check_distance(numberMysterious, inputNumber);
+        }else{
+            result.textContent = 'GAME OVER';
+            btnGo.disabled = true;
+        }
+    }
 })
