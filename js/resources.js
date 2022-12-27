@@ -9,9 +9,15 @@ var textBigNumber = document.getElementById('bigNumber');
 // Menos 1 para que tome en cuenta el mismo numero minimo
 let rangeMin = 40 - 1; 
 let rangeMax = 100;
-var countLifes = 100;
-var unit_point = 250;
-var total_points = countLifes * unit_point;
+var countLifes = 5;
+var point = 250;
+var totalPoints = countLifes * point;
+
+let messagesCloseDistance = ['Aun estas lejos','Ya casi lo encuentras!',
+'Solo un poco más']
+
+let messagesFarDistance=['Estas cerca', 'Estas lejos', 'Estas muy lejos']
+
 // Actualizar las vidas
 lifeActually(countLifes);
 // functions -> devuelve numero mayor o igual que minimo y menor al maximo.
@@ -22,23 +28,18 @@ function lifeActually(lifes){
     document.getElementById('lifes').textContent='LIFES: '+ lifes;
     countLifes = lifes;
 }
-function win(){
-    result.textContent = 'WIN';
-    btnGo.disabled = true;
+function messageGame(msg, bool){
+    result.textContent = msg;
+    btnGo.disabled = bool;
 }
-// MOSTRAR MENSAJES SEGUN EL PORCENTAJE OBTENIDO
-function message_percentage(percentage, is_older){
-    if(is_older){
-        console.log("Numero introducido es mayor");
-        // Mensaje para close_distance
-        // 0% a 45% Aun estas lejos
-        // 46% a 80% Ya casi lo encuentras
-        // 81% a 100 % Solo un poco más 
-    }else{
-        console.log("Numero introducido es menor");
-        // Mensaje para far_distance
-        // 0% a 45% Estas cerca
-        // 46% a 80% Estas lejos
-        // 81% a 100% Estas muy lejos
+function resultMessageGame(percentage, messages){
+    if(percentage <= 45){
+        messageGame(messages[0], false);
+    }
+    else if (percentage > 45 && percentage <= 80){
+        messageGame(messages[1], false);
+    }
+    else{
+        messageGame(messages[2], false);
     }
 }

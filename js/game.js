@@ -15,13 +15,11 @@ btnGo.addEventListener('click', function(){
     inputNumber = parseInt(input.value);
 
     if(numberMysterious == inputNumber){
-        win();
-    }else{
-        if(countLifes != 0){
-            check_distance(numberMysterious, inputNumber);
-        }else{
-            result.textContent = 'GAME OVER';
-            btnGo.disabled = true;
-        }
+        messageGame('Win', true);
+    }else if (countLifes == 0){
+        messageGame('Game Over', true);
+    }
+    if(countLifes != 0 && numberMysterious != inputNumber){
+        check_distance(numberMysterious, inputNumber);
     }
 })
