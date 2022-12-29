@@ -2,13 +2,10 @@
 let inputNumber = 0;
 /*INPUT NUMBER*/ 
 // Cuando se empieza a escrbir en el input de texto
-input.addEventListener("keyup",function(e) {
+input.addEventListener("keyup", () => {
     inputNumber = input.value;
-    textBigNumber.textContent= input.value;
-    if(inputNumber == ''){
-        textBigNumber.textContent= '?';
-    }
-})
+    textBigNumber.textContent= inputNumber ? inputNumber : '?';
+});
 // click al boton GO
 btnGo.addEventListener('click', function(){
     // Obtener el valor del numero ingresado
@@ -16,10 +13,11 @@ btnGo.addEventListener('click', function(){
 
     if(numberMysterious == inputNumber){
         messageGame('Win', true);
-    }else if (countLifes == 0){
-        messageGame('Game Over', true);
-    }
-    if(countLifes != 0 && numberMysterious != inputNumber){
-        check_distance(numberMysterious, inputNumber);
-    }
-})
+    } else { 
+        if (countLifes == 0){
+            messageGame('Game Over', true);
+        } else { 
+            check_distance(numberMysterious, inputNumber); 
+        }  
+    } 
+}) 

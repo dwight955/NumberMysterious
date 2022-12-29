@@ -31,12 +31,10 @@ function check_distance(unknownNumber, inputNumber){
 function message_percentage(percentage, isOlder){
     // DISTACIA DE LEJANIA
     if(isOlder){
-        console.log("Numero introducido es mayor el porcentaje es "+percentage);
         resultMessageGame(percentage, messagesFarDistance);
     }
     // DISTANCIA DE CERCANIA
     else {
-        console.log("Numero introducido es menor el porcentaje es "+percentage);
         resultMessageGame(percentage, messagesCloseDistance);
     }
 }

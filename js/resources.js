@@ -9,14 +9,12 @@ var textBigNumber = document.getElementById('bigNumber');
 // Menos 1 para que tome en cuenta el mismo numero minimo
 let rangeMin = 40 - 1; 
 let rangeMax = 100;
-var countLifes = 5;
+var countLifes = 50;
 var point = 250;
 var totalPoints = countLifes * point;
 
-let messagesCloseDistance = ['Aun estas lejos','Ya casi lo encuentras!',
-'Solo un poco más']
-
-let messagesFarDistance=['Estas cerca', 'Estas lejos', 'Estas muy lejos']
+let messagesCloseDistance = ['FAR','NEAR','VERY CLOSE']
+let messagesFarDistance=['EXCEEDED', 'FAR!!', 'VERY FAR!!']
 
 // Actualizar las vidas
 lifeActually(countLifes);
@@ -31,6 +29,13 @@ function lifeActually(lifes){
 function messageGame(msg, bool){
     result.textContent = msg;
     btnGo.disabled = bool;
+
+    // Si el boton es desactivado, redirecciona a otra pagina
+    if(bool){
+        setTimeout(function() {
+            window.location.replace("endGame.html");
+        }, 2000);
+    }
 }
 function resultMessageGame(percentage, messages){
     if(percentage <= 45){
