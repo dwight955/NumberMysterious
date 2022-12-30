@@ -21,8 +21,6 @@ function check_distance(unknownNumber, inputNumber){
         percentage = Math.floor((indexNumber * 100) / farDistance);
         isOlder = true;
     }
-    // Actualizacion de la vida
-    lifeActually(countLifes - 1);
     // Mandar mensahe y booleano para decidir que mensaje mandar
     message_percentage(percentage, isOlder);
 }
@@ -30,11 +28,14 @@ function check_distance(unknownNumber, inputNumber){
 // MOSTRAR MENSAJES SEGUN EL PORCENTAJE OBTENIDO
 function message_percentage(percentage, isOlder){
     // DISTACIA DE LEJANIA
-    if(isOlder){
-        resultMessageGame(percentage, messagesFarDistance);
+    let messages;
+
+    if (isOlder) {
+        messages = messagesFarDistance;
+    } else {
+        messages = messagesCloseDistance;
     }
-    // DISTANCIA DE CERCANIA
-    else {
-        resultMessageGame(percentage, messagesCloseDistance);
-    }
+
+    resultMessageGame(percentage, messages);
 }
+

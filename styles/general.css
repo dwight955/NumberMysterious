@@ -7,5 +7,25 @@ body{
     position: relative;
 }
 .container{
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1em;
+}
+.game__btn{
+    font-size: 6vw;
+    color: #fff;
+    font-weight: bold;
+    width: 25vw;
+    padding: .5em;
+    border: 0;
+    text-decoration: none;
+    font-family: 'Inter';
+    text-align: center;
+    border-radius: 10px 10px;
+    display: block;
+    margin: auto;
 }

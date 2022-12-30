@@ -1,0 +1,40 @@
+
+.box_score{
+    width: 100%;
+    height: 230px;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 1em;
+}
+.box_score__textWinOrLose, .box_score__text{
+    font-family: 'Inter';
+    font-weight: bold;
+}
+.box_score__textWinOrLose{
+    font-size: 45pt;
+    text-align: center;
+    margin: 0;
+}
+.text-win{
+    color: #27D643;
+}
+.text-lose{
+    color: #FE0000;
+    font-size: 32pt;
+}
+.box_score__text{
+    color: #FD5005;
+    font-size: 25pt;
+}
+.box_score__numbers{
+    font-family: 'Inter';
+    font-size: 25pt;
+    text-align: end;
+    margin-top: 1em;
+}
+.btn_retry{
+    background: #FD5005;
+}

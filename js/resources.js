@@ -9,9 +9,8 @@ var textBigNumber = document.getElementById('bigNumber');
 // Menos 1 para que tome en cuenta el mismo numero minimo
 let rangeMin = 40 - 1; 
 let rangeMax = 100;
-var countLifes = 50;
+var countLifes = 3;
 var point = 250;
-var totalPoints = countLifes * point;
 
 let messagesCloseDistance = ['FAR','NEAR','VERY CLOSE']
 let messagesFarDistance=['EXCEEDED', 'FAR!!', 'VERY FAR!!']
@@ -29,10 +28,16 @@ function lifeActually(lifes){
 function messageGame(msg, bool){
     result.textContent = msg;
     btnGo.disabled = bool;
-
     // Si el boton es desactivado, redirecciona a otra pagina
     if(bool){
+        let claseText = msg == 'WIN' ? 'text-win' : 'text-lose';
+        let totalPoints = countLifes * point;
         setTimeout(function() {
+            sessionStorage.setItem('data', JSON.stringify(
+                {   keyMsg: msg, 
+                    keyPoints: totalPoints, 
+                    keyClaseText: claseText
+                }));
             window.location.replace("endGame.html");
         }, 2000);
     }
