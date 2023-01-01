@@ -1,0 +1,33 @@
+#btn-close-modal {
+    width:100%;
+    padding: .5em .5em  0 .5em;
+    text-align: right;
+    cursor:pointer;
+    color:#fff;
+    font-size: 30pt;
+    box-sizing: border-box;
+}
+#animatedModal > .modal-content{
+    padding: 1em 1em;
+    text-align: center;
+    color: #fff;
+    font-family: 'Inter';
+    font-size: 6vw;
+}
+#animatedModal > .modal-content > .menu__btn{
+    display: block;
+    margin: auto;
+    padding: .8em .8em;
+    margin-bottom: 1em;
+    font-weight: bold;
+} 
+
+.modal-content .menu__btn:nth-child(2){
+    background: #6CD22D;
+}
+.modal-content .menu__btn:nth-child(3){
+    background: #f9ce4d;
+}
+.modal-content .menu__btn:nth-child(4){
+    background: #f44336;
+}

@@ -12,13 +12,13 @@ btnGo.addEventListener('click', function(){
     inputNumber = parseInt(input.value);
 
     if(numberMysterious == inputNumber){
-        messageGame('WIN', true);
+        showMessage('WIN', true);
     } else {
         // Actualizacion de la vida
         lifeActually(countLifes - 1); 
         
         if (countLifes == 0){
-            messageGame('Game Over', true);
+            showMessage('Game Over', true);
         }
         // verificar la distancia de cercania
         check_distance(numberMysterious, inputNumber);

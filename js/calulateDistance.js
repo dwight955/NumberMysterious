@@ -4,7 +4,7 @@ let numberMysterious = getRandomArbitrary(rangeMin, rangeMax);
 // Se le resta -1 para tomar en cuenta el numero minimo
 let closeDistance = numberMysterious - rangeMin; 
 // Multiplicandolo por -1 se convierte en positivo el número;
-let farDistance = (numberMysterious - rangeMax) * (- 1); 
+let farDistance = Math.abs(numberMysterious - rangeMax); 
 
 // Verificar la distancia y dar mensaje segun el resultado
 function check_distance(unknownNumber, inputNumber){
@@ -22,20 +22,5 @@ function check_distance(unknownNumber, inputNumber){
         isOlder = true;
     }
     // Mandar mensahe y booleano para decidir que mensaje mandar
-    message_percentage(percentage, isOlder);
+    chooseTypeOfMessage(percentage, isOlder);
 }
-
-// MOSTRAR MENSAJES SEGUN EL PORCENTAJE OBTENIDO
-function message_percentage(percentage, isOlder){
-    // DISTACIA DE LEJANIA
-    let messages;
-
-    if (isOlder) {
-        messages = messagesFarDistance;
-    } else {
-        messages = messagesCloseDistance;
-    }
-
-    resultMessageGame(percentage, messages);
-}
-

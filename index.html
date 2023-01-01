@@ -4,18 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/library/Modal/css/animate.min.css">
+    <link rel="stylesheet" href="/styles/customModal.css">
     <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/menu.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title>Document</title>
+    
 </head>
 <body class="menu">
     <div class="container">
         <h1 class="menu__title">MYSTERIOUS NUMBER</h1>
         <div class="menu__container_button">
-                <a class="menu__btn start" href="/pages/inGame.html">Start</a>
+                <a class="menu__btn start" id="start" href="#animatedModal">Start</a>
                 <a class="menu__btn howToPlay" href="#">How to play</a>
         </div>
     </div>
+    <!--DEMO01-->
+    <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div  id="btn-close-modal" class="close-animatedModal"> 
+            <i class="far fa-times-circle"></i>
+        </div>
+            
+        <div class="modal-content">
+            <h1>Select difficulty</h1>
+            <a class="menu__btn">Easy</a>
+            <a class="menu__btn">Medium</a>
+            <a class="menu__btn">Hard</a>
+        </div>
+    </div>
+
+    <script src="/library/Modal/js/jquery.min.js"></script>
+    <script src="/library/Modal/js/animatedModal.js"></script>
+    <script src="https://kit.fontawesome.com/9d62536be0.js" crossorigin="anonymous"></script>
+    <script src="/js/switchDifficulty.js"></script>
+
+    <script>
+        $("#start").animatedModal({
+            animatedIn:'lightSpeedIn',
+            animatedOut:'bounceOutDown',
+            color:'#F86526',
+        });
+    </script>
+
 </body>
 </html>
