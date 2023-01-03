@@ -17,5 +17,5 @@ function stringFormatPoints(points){
 }
 
 btnRetry.addEventListener('click', function(){
-    sessionStorage.clear();
+    sessionStorage.data.clear();
 })

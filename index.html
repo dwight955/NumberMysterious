@@ -5,42 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/library/Modal/css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="/styles/customModal.css">
     <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/menu.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <!--LIBRERIAS (ES PREFERIBLE QUE SE CARGUEN PRIMERO)-->
+    <script src="/library/Modal/js/jquery.min.js"></script>
+    <script src="/library/Modal/js/animatedModal.js"></script>
     <title>Document</title>
     
 </head>
 <body class="menu">
     <div class="container">
         <h1 class="menu__title">MYSTERIOUS NUMBER</h1>
-        <div class="menu__container_button">
-                <a class="menu__btn start" id="start" href="#animatedModal">Start</a>
+        <div class="menu__container_button animate__animated animate__backInUp">
+                    <div class="menu__btn start animate__animated animate__delay-2s animate__pulse animate__infinite" id="start" href="#animatedModal"><i class="fas fa-play"></i>
+                    </div>
                 <a class="menu__btn howToPlay" href="#">How to play</a>
         </div>
     </div>
+    
     <!--DEMO01-->
     <div id="animatedModal">
-        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
         <div  id="btn-close-modal" class="close-animatedModal"> 
             <i class="far fa-times-circle"></i>
         </div>
             
         <div class="modal-content">
             <h1>Select difficulty</h1>
-            <a class="menu__btn">Easy</a>
-            <a class="menu__btn">Medium</a>
-            <a class="menu__btn">Hard</a>
+            <a class="menu__btn back-green">Easy</a>
+            <a class="menu__btn back-yellow">Medium</a>
+            <a class="menu__btn back-red">Hard</a>
         </div>
     </div>
 
-    <script src="/library/Modal/js/jquery.min.js"></script>
-    <script src="/library/Modal/js/animatedModal.js"></script>
-    <script src="https://kit.fontawesome.com/9d62536be0.js" crossorigin="anonymous"></script>
-    <script src="/js/switchDifficulty.js"></script>
+    <!--LIBRERIAS-->
+    <script async src="https://kit.fontawesome.com/9d62536be0.js" crossorigin="anonymous"></script>
 
+    <!--SCRIPTS-->
+    <script src="/js/switchDifficulty.js"></script>
     <script>
+        // Propiedades de animacion del modal
         $("#start").animatedModal({
             animatedIn:'lightSpeedIn',
             animatedOut:'bounceOutDown',

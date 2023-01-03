@@ -28,4 +28,23 @@ body{
     border-radius: 10px 10px;
     display: block;
     margin: auto;
+    margin-bottom: 1em;  
+}
+.color-red{
+    color: #f44336;
+}
+.color-green{
+    color: #6CD22D;
+}
+.color-yellow{
+    color: #f9ce4d;
+}
+.back-green{
+    background: #6CD22D;
+}
+.back-yellow{
+    background: #f9ce4d;
+}
+.back-red{
+    background: #f44336;
 }

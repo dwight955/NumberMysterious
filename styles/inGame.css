@@ -64,3 +64,28 @@
 .btn_go{
     background: #6CD22D;
 }
+/*ANIMACIONES - ANIMATE.CSS V.4.1.1*/
+.title{
+    animation: backInDown;
+    animation-duration: 1s;
+}
+.lifes__container{
+    animation: bounceIn;
+    animation-duration: 1.3s;
+}
+.game > .game__clue{
+    animation: bounceInLeft;
+    animation-duration: 1s;
+}
+.game > .game__number{
+    animation: bounceInRight;
+    animation-duration: 1s;
+}
+.game__input_number{
+    animation: bounceInLeft;
+    animation-duration: 1s;
+}
+.btn_go{
+    animation: bounceInUp;
+    animation-duration: 1s;
+}

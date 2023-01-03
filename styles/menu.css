@@ -12,14 +12,8 @@
     width: 40%;
     padding: .5em 2em .5em 2em;
     border-radius: 10px 10px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     text-align: center;
-}
-.menu__btn > a{
-    font-size: 18pt;
-    text-decoration: none;
-    color: white;
-    font-family: 'Inter';
 }
 .menu__title{
     font-size: 35pt;
@@ -28,11 +22,27 @@
     font-style: italic;
     font-weight: 1500;
     font-family: 'Inter';
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+}
+.menu__container_button > .start, .howToPlay{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18pt;
+    font-family: 'inter';
 }
 .start{
     background: #6CD22D;
 }
 .howToPlay{
     background: #DD5A6A;
+}
+
+/*ANIMACIONES CSS - ANIMATE.CSS V.4.1.1*/
+.container > .menu__title{
+    animation: backInDown;
+    animation-duration: 2s;
+}
+.menu__container_button{
+    animation: backInUp;
+    animation-duration: 2s;
 }

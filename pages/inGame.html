@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/inGame.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Mysterious Number</title>
 </head>
 <body>
@@ -20,10 +21,10 @@
         <section class="game">
             <div class="game__clue">
                 <h1>CLUE</h1>
-                <h2 id="game__clue_expression">40 ≥ ? < 100</h2>
+                <h2 id="game__clue_expression"></h2>
             </div>
             <div class="game__number">
-                <span class="game__number_text" id="bigNumber">?</span>
+                <div class="game__number_text" id="bigNumber">?</div>
                 <div class="game__number_msg" id="result"></div>
             </div>
             <input class="game__input_number" type="number" id="input_number" placeholder="The number is ...">

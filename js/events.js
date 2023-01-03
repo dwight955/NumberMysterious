@@ -22,5 +22,6 @@ btnGo.addEventListener('click', function(){
         }
         // verificar la distancia de cercania
         check_distance(numberMysterious, inputNumber);
+        
     } 
-}) 
+})

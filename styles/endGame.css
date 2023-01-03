@@ -38,3 +38,19 @@
 .btn_retry{
     background: #FD5005;
 }
+.btn_home{
+    background: #27D643;
+}
+/*ANIMACIONES*/
+.box_score{
+    animation: bounceIn;
+    animation-duration: .8s;
+}
+.btn_retry{
+    animation: bounceIn;
+    animation-duration: .6s;
+}
+.btn_home{
+    animation: bounceIn;
+    animation-duration: 1s;
+}

@@ -6,25 +6,31 @@ botones.forEach(boton => {
   boton.addEventListener('click', () => {
 
     let difficulty = boton.textContent;
-    let rangeMin = 0;
-    let rangeMax = 0;
+    let numberMin = 0;
+    let numberMax = 0;
+    let lifes = 0
     switch (difficulty) {
         case 'Easy':
-            rangeMin = 10;
-            rangeMax = 50;
+            numberMin = 10;
+            numberMax = 50;
+            lifes = 7;
         break;
         case 'Medium':
-            rangeMin = 30;
-            rangeMax = 100;
+            numberMin = 30;
+            numberMax = 100;
+            lifes = 5;
         break;
         case 'Hard':
-            rangeMin = 40;
-            rangeMax = 150;
+            numberMin = 40;
+            numberMax = 150;
+            lifes = 4;
         break;
     }
+    
     sessionStorage.setItem('intervale', JSON.stringify(
-        {   keyRangeMin: rangeMin, 
-            keyRangeMax: rangeMax
+        {   keynumberMin: numberMin, 
+            keynumberMax: numberMax,
+            keylifes: lifes
         }));
     window.location.replace("/pages/inGame.html"); 
   });
