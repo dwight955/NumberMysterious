@@ -49,7 +49,7 @@ function saveDataEndGame(bool, msg){
     }, 2000);
 }
 // FUNCION PARA EL CONTROL DE LAS ANIMACIONES
-const animateCSS = (element, animation, color, duration = "duration-1s",prefix = 'animate__') =>
+const animateCSS = (element, animation, color = none, duration = "duration-1s",prefix = 'animate__') =>
   // We create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
