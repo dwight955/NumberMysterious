@@ -37,12 +37,11 @@
         <div  id="btn-close-modal" class="close-animatedModal"> 
             <i class="fas fa-times-circle"></i>
         </div>
-            
-        <div class="modal-content">
-            <h1>Select difficulty</h1>
-            <a class="menu__btn back-green">Easy</a>
-            <a class="menu__btn back-yellow">Medium</a>
-            <a class="menu__btn back-red">Hard</a>
+        <h1>Select difficulty</h1>
+        <div class="modal-content" id="fatherButtonsDifficulty">
+            <a class="menu__btn back-green" data-id="0">Easy</a>
+            <a class="menu__btn back-yellow" data-id="1">Medium</a>
+            <a class="menu__btn back-red" data-id="2">Hard</a>
         </div>
     </div>
 
@@ -50,6 +49,7 @@
     <!--<script async src="https://kit.fontawesome.com/9d62536be0.js" crossorigin="anonymous"></script> -->
     <script src="/library/fontawesome_5.15.4/js/fontawesome.min.js"></script>
     <!--SCRIPTS-->
+    <script src="/js/Index/events.js"></script>
     <script src="/js/switchDifficulty.js"></script>
     <script>
         // Propiedades de animacion del modal

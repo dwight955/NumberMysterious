@@ -12,7 +12,10 @@ btnGo.addEventListener('click', function(){
     inputNumber = parseInt(input.value);
 
     if(numberMysterious == inputNumber){
-        showMessage('WIN', true);
+        let difficulty = JSON.parse(sessionStorage.getItem('intervale'));
+        let actuallyDifficulty = difficulty.keyActuallyDifficulty;
+        let IncrementDifficulty = actuallyDifficulty < 2 ? actuallyDifficulty + 1 : actuallyDifficulty;
+        assignDifficulty(IncrementDifficulty);
     } else {
         // Actualizacion de la vida
         lifeActually(countLifes - 1); 
