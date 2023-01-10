@@ -24,11 +24,19 @@ function assignDifficulty(difficulty){
           lifes = 7;
     }
     
-    sessionStorage.setItem('intervale', JSON.stringify(
+    const objGame = getDataActuallyGame();
+    
+    objGame.rangeMin = numberMin;
+    objGame.rangeMax = numberMax;
+    objGame.lifes = lifes;
+    objGame.difficulty.value = difficulty;
+
+    setDataGame(objGame);
+    /*sessionStorage.setItem('intervale', JSON.stringify(
         {   keynumberMin: numberMin, 
             keynumberMax: numberMax,
             keylifes: lifes,
             keyActuallyDifficulty: difficulty
-        }));
+        }));*/
     window.location.replace("/pages/inGame.html"); 
 }

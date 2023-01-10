@@ -16,35 +16,24 @@ function assignMessageByPercentage(percentage, messages, isOlder){
     let colorIndicator = ['red', '#f9ce4d', 'green'];
     let colors = isOlder ? colorIndicator.reverse() : colorIndicator;
     if(percentage <= 45){
-        showMessage(messages[0], false);
+        showMessage(messages[0]);
         animateCSS('bigNumber', 'headShake', colors[0],'duration-2s');
     }
     else if (percentage > 45 && percentage <= 80){
-        showMessage(messages[1], false);
+        showMessage(messages[1]);
         animateCSS('bigNumber', 'headShake', colors[1]);
     }
     else{
-        showMessage(messages[2], false);
+        showMessage(messages[2]);
         animateCSS('bigNumber', 'headShake', colors[2]);
     }
 }
-function showMessage(msg, bool){
+function showMessage(msg){
     result.textContent = msg;
-    btnGo.disabled = bool;
-    // Cuando el boton se desactiva, se guarda los datos del fin del juego
-    if(bool){
-        saveDataEndGame(bool, msg);
-    }
 }
-function saveDataEndGame(bool, msg){
-    let claseText = msg == 'WIN' ? 'text-win' : 'text-lose';
-    let totalPoints = countLifes * point;
+function saveDataEndGame(){
+    btnGo.disabled = true;
     setTimeout(function() {
-        sessionStorage.setItem('data', JSON.stringify(
-            {   keyMsg: msg, 
-                keyPoints: totalPoints, 
-                keyClaseText: claseText
-            }));
         window.location.replace("endGame.html");
     }, 2000);
 }

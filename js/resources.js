@@ -9,14 +9,14 @@ let score = document.getElementById('score');
 let input = document.getElementById('input_number');
 let textBigNumber = document.getElementById('bigNumber');
 let clue = document.getElementById('game__clue_expression');
-
+let element = document.getElementById('actuallyDifficulty');
 // CONFIGURACION INICIAL PARA CADA PARTIDA DEL JUEGO
 // Json que trae los datos del juego 
-let intervale = JSON.parse(sessionStorage.getItem('intervale'));
+let objGame = getDataActuallyGame();
 // Menos 1 para que tome en cuenta el mismo numero minimo
-let rangeMin = intervale.keynumberMin - 1; 
-let rangeMax = intervale.keynumberMax;
-let countLifes = intervale.keylifes;
+let rangeMin = objGame.rangeMin - 1; 
+let rangeMax = objGame.rangeMax;
+let countLifes = objGame.lifes;
 // Valor individual de un punto
 let point = 250;
 // Mensajes para dar pistas al jugador de lo cerca o lejos del numero misterioso
@@ -25,7 +25,8 @@ let messagesFarDistance=['EXCEEDED', 'FAR!!', 'VERY FAR!!']
 
 // Actualizar las vidas
 lifeActually(countLifes);
-showClueExpression(intervale.keynumberMin, intervale.keynumberMax);
+updateDifficulty();
+showClueExpression(objGame.rangeMin, objGame.rangeMax);
 
 // functions -> devuelve numero mayor o igual que minimo y menor al maximo.
 function getRandomArbitrary(min, max) {
@@ -35,6 +36,18 @@ function lifeActually(lifes){
     document.getElementById('lifes').textContent='LIFES: '+ lifes;
     countLifes = lifes;
 }
+function updateDifficulty(){
+    let difficulty = getDataActuallyGame().difficulty;
+    let value = difficulty.value;
+    element.textContent = difficulty.texts[value];
+    element.style.color = difficulty.colors[value];
+}
 function showClueExpression(rangeMin, rangeMax){
     clue.textContent = `${rangeMin} ≥ ? < ${rangeMax}`;
+}
+function pointsAccumulator(){
+    let totalPoints = countLifes * point;
+    let objGame = getDataActuallyGame();
+    objGame.points += totalPoints
+    setDataGame(objGame);
 }

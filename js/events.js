@@ -12,19 +12,18 @@ btnGo.addEventListener('click', function(){
     inputNumber = parseInt(input.value);
 
     if(numberMysterious == inputNumber){
-        let difficulty = JSON.parse(sessionStorage.getItem('intervale'));
-        let actuallyDifficulty = difficulty.keyActuallyDifficulty;
-        let IncrementDifficulty = actuallyDifficulty < 2 ? actuallyDifficulty + 1 : actuallyDifficulty;
-        assignDifficulty(IncrementDifficulty);
+        let actuallyDifficulty = getDataActuallyGame().difficulty.value;
+        let newDifficulty = actuallyDifficulty < 2 ? actuallyDifficulty + 1 : actuallyDifficulty;
+        pointsAccumulator();
+        assignDifficulty(newDifficulty);
     } else {
         // Actualizacion de la vida
         lifeActually(countLifes - 1); 
         
         if (countLifes == 0){
-            showMessage('Game Over', true);
+            saveDataEndGame();
         }
         // verificar la distancia de cercania
         check_distance(numberMysterious, inputNumber);
-        
     } 
 })
