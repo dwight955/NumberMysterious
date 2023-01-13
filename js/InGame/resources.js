@@ -18,7 +18,7 @@ let rangeMin = objGame.rangeMin - 1;
 let rangeMax = objGame.rangeMax;
 let countLifes = objGame.lifes;
 // Valor individual de un punto
-let point = 250;
+let point = objGame.difficulty.valuePoint;
 // Mensajes para dar pistas al jugador de lo cerca o lejos del numero misterioso
 let messagesCloseDistance = ['FAR','NEAR','VERY CLOSE']
 let messagesFarDistance=['EXCEEDED', 'FAR!!', 'VERY FAR!!']

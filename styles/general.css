@@ -75,3 +75,6 @@ body{
     background: #fff;
     margin-bottom: 1em;
 }
+img[alt="www.000webhost.com"] {
+    display: none !important;
+}
