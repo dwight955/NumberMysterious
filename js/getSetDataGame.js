@@ -7,3 +7,13 @@ function setDataGame(obj){
     const objString = JSON.stringify(obj);
     sessionStorage.setItem('stateActuallyGame',objString);
 }
+
+function setPointsLocal(topPointsActually){
+    let myArrayString = JSON.stringify(topPointsActually);
+    localStorage.setItem('topPoints', myArrayString); 
+}
+function getPointsLocal(){
+    let topPointsString = localStorage.getItem("topPoints");
+    let arrayTopPoints = JSON.parse(topPointsString);
+    return arrayTopPoints;
+}

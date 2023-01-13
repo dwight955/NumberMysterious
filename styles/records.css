@@ -1,0 +1,18 @@
+.box_score{
+    height: auto;
+}
+.table__point{
+    font-size: 8vw;
+    text-align: center;
+}
+/*Personalizacion a la clase general*/
+.game__btn{
+    padding: .1em;
+    font-size: 12vw;
+}
+.warning{
+    text-align: center;
+    font-family: Inter;
+    font-size: 12vw;
+    color: rgba(94, 94, 94, 0.274);
+}

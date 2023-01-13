@@ -10,3 +10,7 @@ const stateActuallyGame = {
     points: 0,
 }
 setDataGame(stateActuallyGame);
+if(!localStorage.getItem('topPoints')){
+    let topPoints = [];
+    setPointsLocal(topPoints);
+}

@@ -48,3 +48,30 @@ body{
 .back-red{
     background: #f44336;
 }
+.title{
+    position: relative;
+    background: #fff;
+    border: 1px solid #F86526;
+    width: 100%;
+    color: #F86526;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: .5em;
+}
+.title__text{
+    font-size: 20pt;
+    font-weight: 1000;
+    font-style: italic;
+}
+.box_score{
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 15px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    margin-bottom: 1em;
+}

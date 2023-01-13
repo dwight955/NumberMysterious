@@ -1,5 +1,6 @@
 .menu{
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
 }
@@ -14,6 +15,15 @@
     border-radius: 10px 10px;
     margin-bottom: 1em;
     text-align: center;
+}
+.menu__btn_rewards{
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+    padding: .5em .8em .5em .8em;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 19pt;
 }
 .menu__title{
     font-size: 35pt;

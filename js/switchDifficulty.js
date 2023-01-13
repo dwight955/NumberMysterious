@@ -32,11 +32,5 @@ function assignDifficulty(difficulty){
     objGame.difficulty.value = difficulty;
 
     setDataGame(objGame);
-    /*sessionStorage.setItem('intervale', JSON.stringify(
-        {   keynumberMin: numberMin, 
-            keynumberMax: numberMax,
-            keylifes: lifes,
-            keyActuallyDifficulty: difficulty
-        }));*/
     window.location.replace("/pages/inGame.html"); 
 }

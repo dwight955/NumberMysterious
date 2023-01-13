@@ -1,20 +1,3 @@
-.title{
-    position: relative;
-    background: #fff;
-    border: 1px solid #F86526;
-    width: 100%;
-    color: #F86526;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    text-align: center;
-    padding: .5em;
-}
-.title__text{
-    font-size: 20pt;
-    font-weight: 1000;
-    font-style: italic;
-}
 .lifes__container{
     margin: .5em;
     text-align: right;

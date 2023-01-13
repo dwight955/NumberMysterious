@@ -1,14 +1,3 @@
-
-.box_score{
-    width: 100%;
-    height: 230px;
-    padding: 1em;
-    border: 1px solid black;
-    border-radius: 15px 15px;
-    box-sizing: border-box;
-    background: #fff;
-    margin-bottom: 1em;
-}
 .box_score__textWinOrLose, .box_score__text{
     font-family: 'Inter';
     font-weight: bold;
@@ -33,7 +22,8 @@
     font-family: 'Inter';
     font-size: 25pt;
     text-align: end;
-    margin-top: 1em;
+    margin: .2em;
+
 }
 .btn_retry{
     background: #FD5005;
