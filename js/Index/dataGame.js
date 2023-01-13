@@ -3,7 +3,8 @@ const stateActuallyGame = {
     difficulty: {
         value: 0,
         colors: ['green','yellow','red'],
-        texts: ['Easy','Medium','Hard']
+        texts: ['Easy','Medium','Hard'],
+        valuePoint : 0 
     },
     rangeMin: 0,
     rangeMax: 0,
