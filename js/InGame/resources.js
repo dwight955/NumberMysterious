@@ -33,7 +33,7 @@ function getRandomArbitrary(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 function lifeActually(lifes){
-    document.getElementById('lifes').textContent='LIFES: '+ lifes;
+    document.getElementById('lifes').textContent = lifes > 0 ? 'LIFES: ' + lifes : 'LIFES: 0';
     countLifes = lifes;
 }
 function updateDifficulty(){

@@ -18,18 +18,21 @@ btnGo.addEventListener('click', function(){
     if(input.value.length != 0){
         // Obtener el valor del numero ingresado
         inputNumber = parseInt(input.value);
-        if(countLifes != 0){
+        
             if(numberMysterious == inputNumber){
+                // GANAR
                 let actuallyDifficulty = getDataActuallyGame().difficulty.value;
                 let newDifficulty = actuallyDifficulty < 2 ? actuallyDifficulty + 1 : actuallyDifficulty;
                 pointsAccumulator();
                 assignDifficulty(newDifficulty);
             } else {
+                // GASTA SU VIDA
+                countLifes--;
                 // Actualizacion de la vida
-                lifeActually(countLifes - 1); 
+                lifeActually(countLifes); 
+                if(countLifes == 0) saveDataEndGame()
                 // verificar la distancia de cercania
                 check_distance(numberMysterious, inputNumber);
-            } 
-        }else{saveDataEndGame();}
-    } else{result.innerText = "Write a number"}
+            }
+    } else result.innerText = "Write a number"
 })

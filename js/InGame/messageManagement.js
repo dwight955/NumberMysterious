@@ -13,8 +13,8 @@ function chooseTypeOfMessage(percentage, isOlder){
 }
 
 function assignMessageByPercentage(percentage, messages, isOlder){
-    let colorIndicator = ['red', '#f9ce4d', 'green'];
-    let colors = isOlder ? colorIndicator.reverse() : colorIndicator;
+    let colorIndicator = getDataActuallyGame().difficulty.colors;
+    let colors = isOlder ? colorIndicator: colorIndicator.reverse();
     if(percentage <= 45){
         showMessage(messages[0]);
         animateCSS('bigNumber', 'headShake', colors[0],'duration-2s');
@@ -32,7 +32,6 @@ function showMessage(msg){
     result.textContent = msg;
 }
 function saveDataEndGame(){
-    btnGo.disabled = true;
     setTimeout(function() {
         window.location.replace("endGame.html");
     }, 2000);

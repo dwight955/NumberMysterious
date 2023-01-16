@@ -1,11 +1,12 @@
-.box_score__textWinOrLose, .box_score__text{
+.box_score__textGameOver, .box_score__text{
     font-family: 'Inter';
     font-weight: bold;
 }
-.box_score__textWinOrLose{
+.box_score__textGameOver{
     font-size: 45pt;
     text-align: center;
     margin: 0;
+    color: #FE0000;
 }
 .text-win{
     color: #27D643;

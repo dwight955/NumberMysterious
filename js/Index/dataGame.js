@@ -2,7 +2,7 @@ const stateActuallyGame = {
     lifes: 0,
     difficulty: {
         value: 0,
-        colors: ['green','yellow','red'],
+        colors: ['#6CD22D','#f9ce4d','#FF0000'],
         texts: ['Easy','Medium','Hard'],
         valuePoint : 0 
     },

@@ -78,3 +78,10 @@ body{
 img[alt="www.000webhost.com"] {
     display: none !important;
 }
+.warning{
+    text-align: center;
+    font-family: Inter;
+    margin: .3em .3em;
+    font-size: 12vw;
+    color: rgba(94, 94, 94, 0.274);
+}
