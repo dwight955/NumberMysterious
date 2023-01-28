@@ -17,3 +17,9 @@ function getPointsLocal(){
     let arrayTopPoints = JSON.parse(topPointsString);
     return arrayTopPoints;
 }
+
+function setPropertyDataGame(property, data){
+    let DataGameActual = getDataActuallyGame();
+    DataGameActual[property] = data;
+    setDataGame(DataGameActual);
+}

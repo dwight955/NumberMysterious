@@ -1,4 +1,5 @@
 const stateActuallyGame = {
+    numberMysteriousActual: 0,
     lifes: 0,
     difficulty: {
         value: 0,

@@ -36,24 +36,3 @@ function saveDataEndGame(){
         window.location.replace("endGame.html");
     }, 2000);
 }
-// FUNCION PARA EL CONTROL DE LAS ANIMACIONES
-const animateCSS = (element, animation, color = none, duration = "duration-1s",prefix = 'animate__') =>
-  // We create a Promise and return it
-  new Promise((resolve, reject) => {
-    const animationName = `${prefix}${animation}`;
-    const animationDuration = `${prefix}${duration}`;
-    const node = document.getElementById(element);
-
-    node.classList.add(`${prefix}animated`, animationName, animationDuration);
-    node.style.color=color;
-
-    // When the animation ends, we clean the classes and resolve the Promise
-    function handleAnimationEnd(event) {
-      event.stopPropagation();
-      node.classList.remove(`${prefix}animated`, animationName, animationDuration);
-      node.style.color="#F86526";
-      resolve('Animation ended');
-    }
-
-    node.addEventListener('animationend', handleAnimationEnd, {once: true});
-  });

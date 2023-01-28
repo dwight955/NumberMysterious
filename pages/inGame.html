@@ -33,13 +33,16 @@
             id="input_number" placeholder="The number is ...">
             
             <a class="game__btn btn_go" id="validate">GO!</a>
-        </section> 
-        <div id="score"></div>
+        </section>
    </div>
-   
+   <div id="notification_levelUp" class="notification">
+        <h1 class="notification__text" id="notification__text"></h1>
+        <div class="notification__points" id="notification__points_actually"></div>
+   </div>
     <!--SCRIPTS -->
     <script src="/js/getSetDataGame.js"></script>
     <script src="/js/switchDifficulty.js"></script>
+    <script src="/js/ElementAnimation.js"></script>
     <script src="/js/InGame/resources.js"></script>
     <script src="/js/InGame/calulateDistance.js"></script>
     <script src="/js/InGame/messageManagement.js"></script>

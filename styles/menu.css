@@ -33,6 +33,7 @@
     font-weight: 1500;
     font-family: 'Inter';
     margin-bottom: 1em;
+    text-align: center;
 }
 .menu__container_button > .start, .howToPlay{
     text-decoration: none;

@@ -1,7 +1,10 @@
-.box_score__textGameOver, .box_score__text{
+.box_score__textGameOver, .box_score__text, .box_numberMysterious__text, .box_numberMysterious__number{
     font-family: 'Inter';
     font-weight: bold;
 }
+.box_numberMysterious__text, .box_score__text{
+    color: #FD5005;
+} 
 .box_score__textGameOver{
     font-size: 45pt;
     text-align: center;
@@ -15,9 +18,17 @@
     color: #FE0000;
     font-size: 32pt;
 }
+.box_numberMysterious__text{
+    font-size: 18pt;
+}
 .box_score__text{
-    color: #FD5005;
     font-size: 25pt;
+}
+.box_numberMysterious__number{
+    text-align: center;
+    font-size: 25vw;
+    margin: 0;
+    color: rgb(182, 178, 178);
 }
 .box_score__numbers{
     font-family: 'Inter';

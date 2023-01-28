@@ -9,16 +9,20 @@ let score = document.getElementById('score');
 let input = document.getElementById('input_number');
 let textBigNumber = document.getElementById('bigNumber');
 let clue = document.getElementById('game__clue_expression');
-let element = document.getElementById('actuallyDifficulty');
+let textDifficulty = document.getElementById('actuallyDifficulty');
+let notificationLevelUp = document.getElementById('notification_levelUp');
+let notificationText = document.getElementById('notification__text');
+let notificationPointsActually = document.getElementById('notification__points_actually');
 // CONFIGURACION INICIAL PARA CADA PARTIDA DEL JUEGO
+// Menos 1 para que tome en cuenta el mismo numero minimo
 // Json que trae los datos del juego 
 let objGame = getDataActuallyGame();
-// Menos 1 para que tome en cuenta el mismo numero minimo
 let rangeMin = objGame.rangeMin - 1; 
 let rangeMax = objGame.rangeMax;
 let countLifes = objGame.lifes;
 // Valor individual de un punto
 let point = objGame.difficulty.valuePoint;
+let actuallyDifficulty = objGame.difficulty.value;
 // Mensajes para dar pistas al jugador de lo cerca o lejos del numero misterioso
 let messagesCloseDistance = ['FAR','NEAR','VERY CLOSE']
 let messagesFarDistance=['EXCEEDED', 'FAR!!', 'VERY FAR!!']
@@ -39,15 +43,26 @@ function lifeActually(lifes){
 function updateDifficulty(){
     let difficulty = getDataActuallyGame().difficulty;
     let value = difficulty.value;
-    element.textContent = difficulty.texts[value];
-    element.style.color = difficulty.colors[value];
+    textDifficulty.textContent = difficulty.texts[value];
+    textDifficulty.style.color = difficulty.colors[value];
 }
 function showClueExpression(rangeMin, rangeMax){
     clue.textContent = `${rangeMin} ≥ ? < ${rangeMax}`;
 }
 function pointsAccumulator(){
-    let totalPoints = countLifes * point;
-    let objGame = getDataActuallyGame();
-    objGame.points += totalPoints
-    setDataGame(objGame);
+    let totalPointsGame = countLifes * point;
+    let lastPointsActual = getDataActuallyGame().points;
+    let AccumulatePointsUpdated = totalPointsGame + lastPointsActual;
+    setPropertyDataGame('points',AccumulatePointsUpdated);
+    return AccumulatePointsUpdated;
+}
+function showNotificationLevelUp(pointsActually){
+    notificationLevelUp.style.visibility = 'visible';
+    notificationText.innerHTML = actuallyDifficulty < 2 ? 'Congratulations<br>Next level' : 'Excellent<br>keep it up';
+    notificationPointsActually.textContent = pointsActually;
+    // Animaciones
+    // Animacion de entrada
+    animateCSS('notification_levelUp','bounceInUp','');
+    // Animacion de salida
+    setTimeout(()=>{ animateCSS('notification_levelUp','bounceOutDown','','',true, 'delay-2s');}, 1000)
 }

@@ -1,12 +1,21 @@
-let totalPoints = getDataActuallyGame().points;
+let objGame = getDataActuallyGame();
+let totalPoints = objGame.points;
+let numberMysterious = objGame.numberMysteriousActual;
 let btnRetry = document.getElementById('btn_retry');
 
 savePointsNeatly(totalPoints);
-let score = document.getElementById('score').innerHTML = totalPoints!=0 ? `<h3>${stringFormatPoints(totalPoints)}</h3>` : '<h3 class="warning">No Points</h3>';
+let score = document.getElementById('score');
+score.textContent = totalPoints != 0 ? `${stringFormatPoints(totalPoints)}` : `${addClassNoPoints()}`;
+// Mostrar el numero misterioso
+document.getElementById('numberMysteriousActual').textContent = numberMysterious;
 
 function stringFormatPoints(points){
     let pointsFormat = points.toString().padStart(7, '0');
     return pointsFormat;
+}
+function addClassNoPoints(){
+    score.classList.add('warning');
+    return 'No points';
 }
 btnRetry.addEventListener('click', ()=>{
     sessionStorage.removeItem('stateActuallyGame');

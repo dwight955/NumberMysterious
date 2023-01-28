@@ -1,6 +1,7 @@
 /*CON LOS DATOS SIGUIENTE SE CALCULA 
 LA DISTANCIA LEJANA (far_distance) Y LUEGO LA CERCANA (closeDistance)*/
 let numberMysterious = getRandomArbitrary(rangeMin, rangeMax);
+setPropertyDataGame('numberMysteriousActual', numberMysterious);
 // Se le resta -1 para tomar en cuenta el numero minimo
 let closeDistance = numberMysterious - rangeMin; 
 // Multiplicandolo por -1 se convierte en positivo el número;
