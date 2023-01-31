@@ -22,32 +22,31 @@
     <title>Document</title>
     
 </head>
-<body class="menu">
-    <a id="btnRecords" href="/pages/records.html" class="menu__btn_rewards back-yellow">
-        <i class="fas fa-trophy"></i>
-    </a>
-    <div class="container">
+<body>
+    <div class="menu content">
+        <a id="btnRecords" href="/pages/records.html" class="menu__btn_rewards back-yellow">
+            <i class="fas fa-trophy"></i>
+        </a>
         <h1 class="menu__title">MYSTERIOUS NUMBER</h1>
         <div class="menu__container_button animate__animated animate__backInUp">
                     <div class="menu__btn start animate__animated animate__delay-2s animate__pulse animate__infinite" id="start" href="#animatedModal"><i class="fas fa-play"></i>
                     </div>
                 <a class="menu__btn howToPlay" href="#">How to play</a>
         </div>
-    </div>
-    
-    <!--DEMO01-->
-    <div id="animatedModal">
-        <div  id="btn-close-modal" class="close-animatedModal"> 
-            <i class="fas fa-times-circle"></i>
-        </div>
-        <div class="modal-content" id="fatherButtonsDifficulty">
-            <h1>Select difficulty</h1>
-            <a class="menu__btn back-green" data-id="0">Easy</a>
-            <a class="menu__btn back-yellow" data-id="1">Medium</a>
-            <a class="menu__btn back-red" data-id="2">Hard</a>
-        </div>
-    </div>
 
+        <!--DEMO01-->
+        <div id="animatedModal">
+            <div  id="btn-close-modal" class="close-animatedModal"> 
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="modal-content" id="fatherButtonsDifficulty">
+                <h1>Select difficulty</h1>
+                <a class="menu__btn back-green" data-id="0">Easy</a>
+                <a class="menu__btn back-yellow" data-id="1">Medium</a>
+                <a class="menu__btn back-red" data-id="2">Hard</a>
+            </div>
+        </div>
+    </div>
     <!--LIBRERYS-->
     <!--SCRIPTS-->
     <script src="/js/getSetDataGame.js"></script>
@@ -60,8 +59,14 @@
             animatedIn:'lightSpeedIn',
             animatedOut:'bounceOutDown',
             color:'#F86526',
+            // Callbacks MODALANIMATE
+            /*EVITAR QUE SALGAN SCROLL VERTICALES EN EL INDEX*/
+            beforeClose: function() {
+                    const body = document.querySelector("body");
+                    body.style.overflow = "hidden";
+                }
         });
-        // Callbacks MODALANIMATE
+        
     </script>
 </body>
 </html>

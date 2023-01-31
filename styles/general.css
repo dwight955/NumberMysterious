@@ -7,6 +7,11 @@ body{
     position: relative;
     overflow: hidden;
 }
+.content{
+    width: 100%;
+    max-width: 428px;
+    height: 100vh;
+}
 .container{
     box-sizing: border-box;
     height: auto;
@@ -84,4 +89,23 @@ img[alt="www.000webhost.com"] {
     margin: .3em .3em;
     font-size: 12vw;
     color: rgba(94, 94, 94, 0.274);
+}
+
+/*MEDIA QUERYS PARA PANTALLAS GRANDES*/
+@media (min-width:429px) {
+    body{
+        display: flex;
+        justify-content: center;
+        background: gray;
+    }
+    .menu{
+        background: #eee;;
+    }
+    /*MEDIA QUERIES DEL MODAL*/
+    #animatedModal > .modal-content{
+        font-size: 2.5vw;
+    }
+    #animatedModal{
+        position: absolute !important;
+    }
 }
