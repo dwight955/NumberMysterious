@@ -11,10 +11,10 @@
     <title>Mysterious Number</title>
 </head>
 <body>
-    <div class="title">
-        <span class="title__text">Mysterious Number</span>
-    </div>
-   <div class="container">
+    <div class="content">
+        <div class="title">
+            <span class="title__text">Mysterious Number</span>
+        </div>
         <div class="lifes__container">
             <span id="lifes"></span>
             <span id="actuallyDifficulty"></span>
@@ -34,11 +34,11 @@
             
             <a class="game__btn btn_go" id="validate">GO!</a>
         </section>
-   </div>
-   <div id="notification_levelUp" class="notification">
-        <h1 class="notification__text" id="notification__text"></h1>
-        <div class="notification__points" id="notification__points_actually"></div>
-   </div>
+        <div id="notification_levelUp" class="notification">
+            <h1 class="notification__text" id="notification__text"></h1>
+            <div class="notification__points" id="notification__points_actually"></div>
+       </div>
+    </div>
     <!--SCRIPTS -->
     <script src="/js/getSetDataGame.js"></script>
     <script src="/js/switchDifficulty.js"></script>

@@ -11,14 +11,11 @@ body{
     width: 100%;
     max-width: 428px;
     height: 100vh;
+    position: relative;
 }
 .container{
     box-sizing: border-box;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .game__btn{
     font-size: 6vw;
@@ -79,6 +76,7 @@ body{
     box-sizing: border-box;
     background: #fff;
     margin-bottom: 1em;
+    margin: auto;
 }
 img[alt="www.000webhost.com"] {
     display: none !important;
@@ -98,7 +96,7 @@ img[alt="www.000webhost.com"] {
         justify-content: center;
         background: gray;
     }
-    .menu{
+    .content{
         background: #eee;;
     }
     /*MEDIA QUERIES DEL MODAL*/

@@ -10,3 +10,12 @@
     padding: .1em;
     font-size: 12vw;
 }
+@media (min-width:429px) {
+    .table__point{
+        font-size: 2vw;
+    }
+    .game__btn{
+        font-size: 3vw;
+        width: 30%;
+    }
+}

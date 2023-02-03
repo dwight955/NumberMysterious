@@ -56,3 +56,13 @@
     animation: bounceIn;
     animation-duration: 1s;
 }
+@media (min-width:429px) {
+    .box_numberMysterious__number{
+        font-size: 60pt;
+    }
+    .btn_home{
+        width: 30%;
+        font-size: 25pt;
+        padding: .2em .2em;
+    }
+}

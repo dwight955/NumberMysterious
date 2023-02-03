@@ -13,17 +13,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="title">
-        <span class="title__text">Last Records</span>
+    <div class="content">
+        <div class="title">
+            <span class="title__text">Last Records</span>
+        </div>
+        <div class="container">
+            <ul class="box_score" id="table_records">
+            </ul>
+        </div>
+    
+        <a class="game__btn back-red" href="/index.html">
+            <i class="fas fa-long-arrow-alt-left"></i>
+        </a>
     </div>
-    <div class="container">
-        <ul class="box_score" id="table_records">
-        </ul>
-    </div>
-
-    <a class="game__btn back-red" href="/index.html">
-        <i class="fas fa-long-arrow-alt-left"></i>
-    </a>
+    
     <script src="/js/getSetDataGame.js"></script>
     <script src="/js/Records/printPoints.js"></script>
 </body>
