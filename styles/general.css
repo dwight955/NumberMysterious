@@ -88,7 +88,16 @@ img[alt="www.000webhost.com"] {
     font-size: 12vw;
     color: rgba(94, 94, 94, 0.274);
 }
-
+.btn_shadow{
+    -webkit-box-shadow: 0px 18px 16px -3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 18px 16px -3px rgba(0,0,0,0.45);
+    box-shadow: 0px 12px 16px -3px rgba(0,0,0,0.45);
+    transition: all ease-in-out 250ms;
+}
+.btn_shadow:hover{
+    transform: scale(0.9);
+    box-shadow: 0px 6px 16px -3px rgba(0,0,0,0.45);
+}
 /*MEDIA QUERYS PARA PANTALLAS GRANDES*/
 @media (min-width:429px) {
     body{
@@ -97,7 +106,7 @@ img[alt="www.000webhost.com"] {
         background: gray;
     }
     .content{
-        background: #eee;;
+        background: #eee;
     }
     /*MEDIA QUERIES DEL MODAL*/
     #animatedModal > .modal-content{

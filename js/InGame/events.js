@@ -12,15 +12,24 @@ function showNumberString() {
     input.value = inputNumber.slice(0, maxDigit);
   }
   textBigNumber.textContent = inputNumber ? input.value : "?";
+  // Se limpiara el mesaje del resultado
+  result.innerHTML = '';
 }
 // click al boton GO
-btnGo.addEventListener("click", function () {
+btnGo.addEventListener("click",evaluateInputData);
+// Accionar metodo al presionar ENTER 
+input.addEventListener("keyup",function(event){
+  if (event.key === "Enter") {
+    evaluateInputData();
+  }
+})
+// El metodo que evalua el dato entrante
+function evaluateInputData() {
   if (input.value.length != 0) {
     // Obtener el valor del numero ingresado
     inputNumber = parseInt(input.value);
-
+     // GANAR
     if (numberMysterious == inputNumber) {
-      // GANAR
       let newDifficulty = actuallyDifficulty < 2 ? actuallyDifficulty + 1 : actuallyDifficulty;
       let pointsActually = pointsAccumulator();
       showNotificationLevelUp(pointsActually);
@@ -34,5 +43,7 @@ btnGo.addEventListener("click", function () {
       // verificar la distancia de cercania
       check_distance(numberMysterious, inputNumber);
     }
+    // El input de entrada vuelve a tener el cursor
+    input.focus();
   } else result.innerText = "Write a number";
-});
+}
