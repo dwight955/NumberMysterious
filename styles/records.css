@@ -1,3 +1,8 @@
+.container__records{
+    box-sizing: border-box;
+    height: auto;
+    margin-bottom: 2em;
+}
 .box_score{
     height: auto;
 }
@@ -18,4 +23,13 @@
         font-size: 3vw;
         width: 30%;
     }
+}
+/*ANIMACIONES CSS - ANIMATE.CSS V.4.1.1*/
+.container__records{
+    animation: bounceIn;
+    animation-duration: 2s;   
+}
+.btn_return{
+    animation: bounceIn;
+    animation-duration: 2s;
 }

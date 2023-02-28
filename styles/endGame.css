@@ -4,7 +4,11 @@
 }
 .box_numberMysterious__text, .box_score__text{
     color: #FD5005;
-} 
+}
+.box_score{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
 .box_score__textGameOver{
     font-size: 45pt;
     text-align: center;

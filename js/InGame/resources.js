@@ -47,7 +47,7 @@ function updateDifficulty(){
     textDifficulty.style.color = difficulty.colors[value];
 }
 function showClueExpression(rangeMin, rangeMax){
-    clue.textContent = `${rangeMin} ≥ ? < ${rangeMax}`;
+    clue.textContent = `${rangeMin} ≤ ? < ${rangeMax}`;
 }
 function pointsAccumulator(){
     let totalPointsGame = countLifes * point;

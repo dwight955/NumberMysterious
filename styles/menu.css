@@ -48,11 +48,11 @@
     background: #DD5A6A;
 }
 /*ANIMACIONES CSS - ANIMATE.CSS V.4.1.1*/
-.container > .menu__title{
+.menu__title{
     animation: backInDown;
     animation-duration: 2s;
 }
 .menu__container_button{
-    animation: backInUp;
+    animation: bounceIn;
     animation-duration: 2s;
 }
