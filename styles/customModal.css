@@ -7,21 +7,32 @@
     font-size: 30pt;
     box-sizing: border-box;
 }
-#animatedModal > .modal-content{
-    padding: 1em 1em;
-    text-align: center;
+
+#ModalDifficulty, #ModalHowToPlay > .modal-content{
     color: #fff;
     font-family: 'Inter';
     font-size: 6vw;
 }
-#animatedModal > .modal-content > .menu__btn{
+
+/*ESTYLES MODAL ModalDifficulty*/
+#ModalDifficulty > .modal-content{
+    text-align: center;
+}
+#ModalDifficulty > .modal-content > .menu__btn{
     display: block;
     margin: auto;
     padding: .8em .8em;
     margin-bottom: 1em;
     font-weight: bold;
 }
-/*
-#animatedModal{
-    position: absolute !important;
-}*/
+
+/*ESTYLES MODAL HowToPlay*/
+#ModalHowToPlay > .modal-content{
+    padding: 0em 1em;
+}
+#ModalHowToPlay > .modal-content > p{
+    font-size: 18pt;
+}
+#ModalHowToPlay > .modal-content > img{
+    width: 100%;
+}

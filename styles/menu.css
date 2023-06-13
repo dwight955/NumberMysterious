@@ -25,6 +25,11 @@
     border-radius: 10px;
     font-size: 19pt;
 }
+.logo_game{
+    margin: 1em auto;
+    width: 300px;
+}
+/*
 .menu__title{
     font-size: 35pt;
     text-align: left;
@@ -34,7 +39,7 @@
     font-family: 'Inter';
     margin-bottom: 1em;
     text-align: center;
-}
+}*/
 .menu__container_button > .start, .howToPlay{
     text-decoration: none;
     color: #fff;

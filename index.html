@@ -15,29 +15,29 @@
     <!--LINKS STYLES CSS-->
     <link rel="stylesheet" href="/styles/general.css">
     <link rel="stylesheet" href="/styles/menu.css">
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'> 
     <!--LIBRERIAS (ES PREFERIBLE QUE SE CARGUEN PRIMERO)-->
     <script src="/library/Modal/js/jquery.min.js"></script>
     <script src="/library/Modal/js/animatedModal.js"></script>
     <title>Document</title>
-    
 </head>
 <body>
     <div class="menu content">
         <a id="btnRecords" href="/pages/records.html" class="menu__btn_rewards back-yellow btn_shadow animate__animated animate__bounceInDown">
             <i class="fas fa-trophy"></i>
         </a>
-        <h1 class="menu__title animate__animated animate__bounceIn">MYSTERIOUS NUMBER</h1>
+        <!-- <h1 class="menu__title animate__animated animate__bounceIn">MYSTERIOUS NUMBER</h1> -->
+        <img class="logo_game animate__animated animate__bounceIn" src="resources/svg/Logo_TheNumberMisterious.svg" alt="Logo_TheNumberMisterious">
         <div class="menu__container_button">
-                    <div class="menu__btn start animate__animated animate__delay-2s animate__pulse animate__infinite" id="start" href="#animatedModal">
+                    <div class="menu__btn start animate__animated animate__delay-2s animate__pulse animate__infinite" id="start" href="#ModalDifficulty">
                         <i class="fas fa-play"></i>
                     </div>
-                <a class="menu__btn howToPlay btn_shadow" href="#">How to play</a>
+                <div id="difficulty" class="menu__btn howToPlay btn_shadow" href="#ModalHowToPlay">How to play</div>
         </div>
 
-        <!--DEMO01-->
-        <div id="animatedModal">
-            <div  id="btn-close-modal" class="close-animatedModal"> 
+        <!-- Modal Difficulty -->
+        <div id="ModalDifficulty" style="opacity: 0;">
+            <div  id="btn-close-modal" class="close-ModalDifficulty"> 
                 <i class="fas fa-times-circle"></i>
             </div>
             <div class="modal-content" id="fatherButtonsDifficulty">
@@ -45,6 +45,21 @@
                 <a class="menu__btn back-green btn_shadow" data-id="0">Easy</a>
                 <a class="menu__btn back-yellow btn_shadow" data-id="1">Medium</a>
                 <a class="menu__btn back-red btn_shadow" data-id="2">Hard</a>
+            </div>
+        </div>
+
+        <!--Modal HowToPlay -->
+        <div id="ModalHowToPlay" style="opacity: 0;">
+            <div  id="btn-close-modal" class="close-ModalHowToPlay"> 
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <div class="modal-content" id="fatherButtonsDifficulty">
+                <h1>Ready for the challenge</h1>
+                <p>The game consists of entering numbers that are close to the Mysterious Number</p>
+                <img src="/resources/img/LineaNumerica.png" alt="LineaNumerica_NumberGames">
+                <p>The messages tell you how close or far you are from the Mystery Number</p>
+                <img src="resources/svg/Messages.svg" alt="Messages_MysteriousNumber" />
+                <h5>Good luck!</h5>
             </div>
         </div>
     </div>
@@ -56,18 +71,27 @@
     <script src="/js/switchDifficulty.js"></script>
     <script src="/js/music.js"></script>
     <script>
-        // Propiedades de animacion del modal
-        $("#start").animatedModal({
-            animatedIn:'lightSpeedIn',
-            animatedOut:'bounceOutDown',
-            color:'#F86526',
-            // Callbacks MODALANIMATE
-            /*EVITAR QUE SALGAN SCROLL VERTICALES EN EL INDEX*/
-            beforeClose: function() {
-                    const body = document.querySelector("body");
-                    body.style.overflow = "hidden";
-                }
-        });
+            // Propiedades de animacion del modal
+            $("#start").animatedModal({
+                animatedIn:'lightSpeedIn',
+                animatedOut:'bounceOutDown',
+                color:'#F86526',
+                
+                beforeClose: function() {
+                        const body = document.querySelector("body");
+                        body.style.overflow = "hidden";
+                    }
+            });
+            $("#difficulty").animatedModal({
+                animatedIn:'lightSpeedIn',
+                animatedOut:'bounceOutDown',
+                color:'#F86526',
+                
+                beforeClose: function() {
+                        const body = document.querySelector("body");
+                        body.style.overflow = "hidden";
+                    }
+            });
         
     </script>
 </body>
