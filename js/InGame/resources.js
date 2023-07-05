@@ -17,7 +17,7 @@ let notificationPointsActually = document.getElementById('notification__points_a
 // Menos 1 para que tome en cuenta el mismo numero minimo
 // Json que trae los datos del juego 
 let objGame = getDataActuallyGame();
-let rangeMin = objGame.rangeMin - 1; 
+let rangeMin = objGame.rangeMin; 
 let rangeMax = objGame.rangeMax;
 let countLifes = objGame.lifes;
 // Valor individual de un punto
