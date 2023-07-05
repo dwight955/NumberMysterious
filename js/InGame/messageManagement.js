@@ -1,35 +1,23 @@
-
-// ESCOGE EL TIPO DE MENSAJES
-function chooseTypeOfMessage(percentage, isOlder){
-    // DISTACIA DE LEJANIA
-    let messages;
-
-    if (isOlder) {
-        messages = messagesFarDistance;
-    } else {
-        messages = messagesCloseDistance;
-    }
-    assignMessageByPercentage(percentage, messages, isOlder);
-}
-
-function assignMessageByPercentage(percentage, messages, isOlder){
-    let colorIndicator = getDataActuallyGame().difficulty.colors;
-    let colors = isOlder ? colorIndicator: colorIndicator.reverse();
-    if(percentage <= 45){
+function assignMessageByPercentage(distanceNumbers){
+    let colors = getDataActuallyGame().difficulty.colors;
+    if(distanceNumbers > 11){
+        // FAR
         showMessage(messages[0]);
-        animateCSS('bigNumber', 'headShake', colors[0],'duration-2s');
+        animateCSS('bigNumber', 'headShake', colors[2],'duration-2s');
     }
-    else if (percentage > 45 && percentage <= 80){
+    else if (distanceNumbers > 5 && distanceNumbers <= 11){
+        // NEAR
         showMessage(messages[1]);
         animateCSS('bigNumber', 'headShake', colors[1]);
     }
     else{
+        // VERY CLOSE
         showMessage(messages[2]);
-        animateCSS('bigNumber', 'headShake', colors[2]);
+        animateCSS('bigNumber', 'headShake', colors[0]);
     }
 }
 function showMessage(msg){
-    result.textContent = msg;
+    result.textContent = msg + " " + guideSymbol;
 }
 function saveDataEndGame(){
     setTimeout(function() {

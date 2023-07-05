@@ -54,6 +54,6 @@ function subtractLife(){
     // Actualizacion de la vida
     lifeActually(countLifes);
     // verificar la distancia de cercania
-    check_distance(numberMysterious, inputNumber);
+    check_distance(inputNumber);
   }else result.innerText = "Out of Range";
 }

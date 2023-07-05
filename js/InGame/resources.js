@@ -24,8 +24,7 @@ let countLifes = objGame.lifes;
 let point = objGame.difficulty.valuePoint;
 let actuallyDifficulty = objGame.difficulty.value;
 // Mensajes para dar pistas al jugador de lo cerca o lejos del numero misterioso
-let messagesCloseDistance = ['FAR','NEAR','VERY CLOSE']
-let messagesFarDistance=['EXCEEDED', 'FAR!!', 'VERY FAR!!']
+let messages = ['FAR','NEAR','VERY CLOSE'];
 
 // Actualizar las vidas
 lifeActually(countLifes);
