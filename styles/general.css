@@ -28,14 +28,14 @@ body{
     margin: auto;
     margin-bottom: 1em;  
 }
-.color-red{
-    color: #f44336;
+.color-red {
+    color: #ff1f0f !important;
 }
 .color-green{
-    color: #6CD22D;
+    color: #6CD22D !important;
 }
 .color-yellow{
-    color: #f9ce4d;
+    color: #f9ce4d !important;
 }
 .back-green{
     background: #6CD22D;

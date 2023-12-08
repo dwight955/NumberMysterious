@@ -38,7 +38,11 @@ function evaluateInputData() {
     }
     // El input de entrada vuelve a tener el cursor
     input.focus();
-  } else result.innerText = "Write a number";
+  } else {
+    result.innerText = "Write a number";
+    animateCSS('result','headShake', 'color-red'); 
+  } 
+  
 }
 function playerWin(){
   let newDifficulty = actuallyDifficulty < 2 ? actuallyDifficulty + 1 : actuallyDifficulty;
@@ -53,7 +57,10 @@ function subtractLife(){
     countLifes--;
     // Actualizacion de la vida
     lifeActually(countLifes);
-    // verificar la distancia de cercania
+    // verificar la distancia
     check_distance(inputNumber);
-  }else result.innerText = "Out of Range";
+  }else {
+    result.innerText = "Out of Range";
+    animateCSS('result','headShake', 'color-red'); 
+  } 
 }
